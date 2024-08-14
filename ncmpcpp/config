@@ -19,7 +19,7 @@ ncmpcpp_directory = ~/.config/ncmpcpp
 ## MPD clients (eg. ncmpc) also use that location.
 ##
 #
-#lyrics_directory = ~/.lyrics
+lyrics_directory = ~/.local/share/lyrics
 #
 ##### connection settings #####
 #
@@ -77,7 +77,7 @@ visualizer_data_source = /tmp/mpd.fifo
 ## to synchronize with audio.
 ##
 #
-visualizer_output_name = "my_fifo"
+visualizer_output_name = "Visualizer feed"
 #
 ##
 ## If you set format to 44100:16:2, make it 'yes'.
@@ -89,7 +89,7 @@ visualizer_in_stereo = yes
 ## visualization and audio.
 ##
 #
-#visualizer_sync_interval = 0
+visualizer_sync_interval = 0
 #
 ##
 ## Note: To enable spectrum frequency visualization you need to compile ncmpcpp
@@ -100,13 +100,13 @@ visualizer_in_stereo = yes
 ##
 visualizer_type = spectrum
 #
-#visualizer_fps = 60
+visualizer_fps = 60
 #
 #visualizer_autoscale = no
 #
 visualizer_look = ●▮
 #
-#visualizer_color = blue, cyan, green, yellow, magenta, red
+visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 ## Alternative subset of 256 colors for terminals that support it.
 ##
