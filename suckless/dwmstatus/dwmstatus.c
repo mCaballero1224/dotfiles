@@ -220,12 +220,12 @@ main(void)
 		bat0 = getbattery("/sys/class/power_supply/BAT0");
 		bat1 = getbattery("/sys/class/power_supply/BAT1");
 		tmutc = mktimes("%H:%M", tzutc);
-		tmuspacific = mktimes("PDT %W %a %d %b %H:%M %Z %Y", tzuspacific);
+		tmuspacific = mktimes("PDT %a %d %b %H:%M %Z %Y", tzuspacific);
 		kbmap = execscript("setxkbmap -query | grep layout | cut -d':' -f 2- | tr -d ' '");
 		t0 = gettemperature("/sys/devices/virtual/thermal/thermal_zone0", "temp");
 		t1 = gettemperature("/sys/devices/virtual/thermal/thermal_zone1", "temp");
 
-		status = smprintf(" T:%s | %s L:%s B:%s | %s %s",
+		status = smprintf(" T:%s|%s  L:%s  B:%s|%s  %s ",
 				t0, t1, avgs, bat0, bat1, tmuspacific);
 		setstatus(status);
 
